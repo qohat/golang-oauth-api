@@ -39,7 +39,7 @@ var fbOauthConf = &oauth2.Config{
 	RedirectURL:  os.Getenv("FB_OAUTH_REDIRECT_URI"),*/
 	ClientID:     "2724842771078378",
 	ClientSecret: "e3347c0c4059333e3550bd3a07165ce3",
-	RedirectURL:  "http://localhost:9191/auth/facebook/callback",
+	RedirectURL:  "https://auth.dochealth.co/auth/facebook/callback",
 	Scopes:       []string{"public_profile", "email"},
 	Endpoint:     facebook.Endpoint,
 }
@@ -50,12 +50,12 @@ var googleOauthConfig = &oauth2.Config{
 	RedirectURL:  os.Getenv("GOOGLE_OAUTH_REDIRECT_URI"),*/
 	ClientID:     "127999312447-9rnltevu3v1n1fmij6alat0r08b224af.apps.googleusercontent.com",
 	ClientSecret: "-wIVprfkEjCfw9e5njbmYe8j",
-	RedirectURL:  "http://localhost:9191/auth/google/callback",
+	RedirectURL:  "https://auth.dochealth.co/auth/google/callback",
 	Scopes:       []string{"https://www.googleapis.com/auth/userinfo.email"},
 	Endpoint:     google.Endpoint,
 }
 
-var oauthLocalRedirect = "http://dev.app.dochealth.co/auth/verification?key="
+var oauthLocalRedirect = "https://app.dochealth.co/auth/verification?key="
 
 //NewExtAuth constructor
 func NewExtAuth(uApp application.UserAppInterface, rd auth.AuthInterface, tk auth.TokenInterface) *ExtAuth {

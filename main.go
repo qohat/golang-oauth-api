@@ -63,8 +63,8 @@ func main() {
 
 	//user routes
 	r.POST("/users", users.SaveUser)
-	r.GET("/users", users.GetUsers)
-	r.GET("/users/:user_id", users.GetUser)
+	/*r.GET("/users", users.GetUsers)
+	r.GET("/users/:user_id", users.GetUser)*/
 
 	//authentication routes
 	r.POST("/login", authenticate.Login)
